@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		61BDD84F1FC4187200B28EEC /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 61BDD84E1FC4187200B28EEC /* main.c */; };
-		61BDD8591FC4192300B28EEC /* libraylib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 61BDD8581FC4192300B28EEC /* libraylib.a */; };
-		61BDD85D1FC41FC200B28EEC /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 61BDD85A1FC4199200B28EEC /* libglfw.3.2.dylib */; };
+		61CB0A281FCF9ACC00834EC7 /* libraylib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 61CB0A271FCF9ACC00834EC7 /* libraylib.a */; };
+		61CB0A2A1FCF9AF500834EC7 /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 61CB0A291FCF9AF500834EC7 /* libglfw.3.2.dylib */; };
 		61F19CC81FC421A2002B371C /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61BDD8571FC418C000B28EEC /* OpenGL.framework */; };
 		61F19CC91FC421A8002B371C /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61BDD8561FC418B400B28EEC /* OpenAL.framework */; };
 /* End PBXBuildFile section */
@@ -31,8 +31,8 @@
 		61BDD84E1FC4187200B28EEC /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		61BDD8561FC418B400B28EEC /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		61BDD8571FC418C000B28EEC /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
-		61BDD8581FC4192300B28EEC /* libraylib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libraylib.a; path = ../../raylib/release/libs/osx/libraylib.a; sourceTree = "<group>"; };
-		61BDD85A1FC4199200B28EEC /* libglfw.3.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.2.dylib; path = ../../../../../usr/local/Cellar/glfw/3.2.1/lib/libglfw.3.2.dylib; sourceTree = "<group>"; };
+		61CB0A271FCF9ACC00834EC7 /* libraylib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libraylib.a; path = ../../release/libs/osx/libraylib.a; sourceTree = "<group>"; };
+		61CB0A291FCF9AF500834EC7 /* libglfw.3.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.2.dylib; path = ../../../../../../usr/local/Cellar/glfw/3.2.1/lib/libglfw.3.2.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,10 +40,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61CB0A2A1FCF9AF500834EC7 /* libglfw.3.2.dylib in Frameworks */,
+				61CB0A281FCF9ACC00834EC7 /* libraylib.a in Frameworks */,
 				61F19CC91FC421A8002B371C /* OpenAL.framework in Frameworks */,
 				61F19CC81FC421A2002B371C /* OpenGL.framework in Frameworks */,
-				61BDD85D1FC41FC200B28EEC /* libglfw.3.2.dylib in Frameworks */,
-				61BDD8591FC4192300B28EEC /* libraylib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,8 +78,8 @@
 		61BDD8551FC418B400B28EEC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				61BDD85A1FC4199200B28EEC /* libglfw.3.2.dylib */,
-				61BDD8581FC4192300B28EEC /* libraylib.a */,
+				61CB0A291FCF9AF500834EC7 /* libglfw.3.2.dylib */,
+				61CB0A271FCF9ACC00834EC7 /* libraylib.a */,
 				61BDD8571FC418C000B28EEC /* OpenGL.framework */,
 				61BDD8561FC418B400B28EEC /* OpenAL.framework */,
 			);
@@ -102,7 +102,7 @@
 			dependencies = (
 			);
 			name = "Empty-Project";
-			productName = Empty-Project;
+			productName = "Empty-Project";
 			productReference = 61BDD84B1FC4187200B28EEC /* Empty-Project */;
 			productType = "com.apple.product-type.tool";
 		};
@@ -257,10 +257,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				HEADER_SEARCH_PATHS = /Users/braedenfoster/Developer/raylib/release/include;
+				HEADER_SEARCH_PATHS = "${SOURCE_ROOT}/../../release/include";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/braedenfoster/Developer/raylib/release/libs/osx,
+					"${SOURCE_ROOT}/../../release/libs/osx",
 					/usr/local/Cellar/glfw/3.2.1/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -271,10 +271,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				HEADER_SEARCH_PATHS = /Users/braedenfoster/Developer/raylib/release/include;
+				HEADER_SEARCH_PATHS = "${SOURCE_ROOT}/../../release/include";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/braedenfoster/Developer/raylib/release/libs/osx,
+					"${SOURCE_ROOT}/../../release/libs/osx",
 					/usr/local/Cellar/glfw/3.2.1/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";

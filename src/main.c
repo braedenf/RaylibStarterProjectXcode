@@ -8,17 +8,18 @@ int main() {
     
     InitWindow(screenWidth, screenHeight, "Raylib - empty-project");
     
-    SetTargetFPS(60);
+    SetTargetFPS(60); //Set target FPS
     
-    //start game loop
+    //[-----------------start game loop--------------------]
     while (!WindowShouldClose()) {
-        //update
+        //[------------Draw--------------]
         BeginDrawing();
             ClearBackground(RAYWHITE);
             DrawText("Start your game...", screenWidth/2.5, screenHeight/2, 20, LIGHTGRAY);
         EndDrawing();
+        //[----------End Draw------------]
     }
-    //de-initialise window
+    //[---------------De-initialise Window-----------------]
     CloseWindow(); //both window and OpenGL context
     
     return 0;
